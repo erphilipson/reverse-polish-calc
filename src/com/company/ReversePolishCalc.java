@@ -8,25 +8,19 @@ import java.util.List;
  */
 
 public class ReversePolishCalc {
-
-    // You'll need a variable here to keep track of the top of the stack
+    
     private double stackTop = 0;
 
-    // The array of the input string split up
+    // array of the input string split up
     private String[] tokens;
 
-    // The stack
     List<String> stack = new ArrayList<>();
 
     public double calculate(String input) {
 
-        // 1. Use the String split method to split the string into tokens at the commas
+        // split the string into tokens at the commas
         tokens = input.split(",");
 
-        // 2. Allocate a stack as big as the number of tokens
-//        stack = new String[tokens.length];
-
-        // 3. write the algorithm
         String operators = "+-*/";
         for (String token : tokens) {
             // calls to push() and pop() and do the math here
@@ -45,7 +39,7 @@ public class ReversePolishCalc {
 
         }
 
-        // 4. return the result
+        // return result
         return pop();
     }
 
